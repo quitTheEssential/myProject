@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    {% if title %}
-        <title>Django Store - {{title}}</title>
-    {% else %}
-        <title>Django Store</title>
-    {% endif %}
-</head>
-<body>
+{% extends "store/base.html" %}
+{% block content %}
     <h1>Store about page!</h1>
-</body>
-</html>
+{% endblock content %}
