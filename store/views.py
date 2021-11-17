@@ -16,10 +16,13 @@ posts = [
 ]
 
 def home(request):
-    context = {
-        'posts': posts
-    }
-    return render(request, 'store/home.html', context = context)
+    return render(request, 'store/home.html')
 
 def about(request):
     return render(request, 'store/about.html', context = {'title': 'About'})
+
+def shop(request):
+    context = {
+        'posts': posts
+    }
+    return render(request, 'store/shop.html', context = context)

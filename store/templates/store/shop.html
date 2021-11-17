@@ -1,0 +1,12 @@
+{% extends "store/base.html" %}
+{% block content %}
+    {% for post in posts %}
+        <div class="container">
+            <h1>Title: {{ post.title }}</h1>
+            <p>By {{ post.author }} on {{ post.date_posted }}</p>
+            <p>{{ post.content }}</p>
+            {% load static %}
+            <img src="{% static 'store/buty_meskie_airmax97.jpg' %}" alt="Airmax 97">
+        </div>
+    {% endfor %}
+{% endblock content %}
