@@ -8,6 +8,7 @@ Project for PythonSQL classes - Website with sneakers store
 
 ## General info
 This project is simple Lorem ipsum dolor generator.
+Hey JLtest
 	
 ## Technologies
 Project is created with:
