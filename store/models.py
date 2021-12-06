@@ -15,6 +15,20 @@ class Clients(models.Model):
     street_number = models.TextField(max_length=10)
     flat_number = models.TextField(max_length=10)
     postal_code = models.TextField(max_length=6)
+    date_created = models.DateTimeField(default=timezone.now)
+
+    def __str__(self):
+        return self.name
+
+
+class Products(models.Model):
+    ID = models.IntegerField(primary_key=True, db_index=True)
+    brand = models.TextField(max_length=100)
+    model = models.TextField(max_length=100)
+    size = models.DecimalField(max_digits=3, decimal_places=1)
+    price = models.DecimalField(max_digits=3, decimal_places=2)
+    colour = models.TextField(max_length=15)
+    Picture = models.ImageField()
 
     def __str__(self):
         return self.name

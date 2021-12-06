@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from .models import Products
 posts = [
     {
         'author': 'Robert',
@@ -15,6 +15,7 @@ posts = [
     }
 ]
 
+
 def home(request):
     return render(request, 'store/home.html')
 
@@ -23,6 +24,7 @@ def about(request):
 
 def shop(request):
     context = {
-        'posts': posts
+        'posts':posts
+        # 'Products': Products.objects.all()
     }
     return render(request, 'store/shop.html', context = context)
