@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Products
+#from .models import Products
 posts = [
     {
         'author': 'Robert',
