@@ -6,7 +6,7 @@
             <p>By {{ post.author }} on {{ post.date_posted }}</p>
             <p>{{ post.content }}</p>
             {% load static %}
-            <img src="{% static 'store/buty_meskie_airmax97.jpg' %}" alt="Airmax 97">
+            <img  src= " {{  user.profile.image.url  }} " >
         </div>
     {% endfor %}
 {% endblock content %}
