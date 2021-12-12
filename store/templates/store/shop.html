@@ -1,12 +1,12 @@
 {% extends "store/base.html" %}
 {% block content %}
-    {% for post in posts %}
+    {% for product in Products %}
         <div class="container">
-            <h1>Title: {{ post.title }}</h1>
-            <p>By {{ post.author }} on {{ post.date_posted }}</p>
-            <p>{{ post.content }}</p>
+            <h1>Brand: {{ product.brand }}</h1>
+            <p>Colour {{ product.colour }} Size {{ product.size }}</p>
+            <p>Price {{ product.price }}</p>
             {% load static %}
-            <img  src= " {{  user.profile.image.url  }} " >
+            <img  src= "{{ MEDIA_URL }}{{ product.Picture.url }}"  alt="img" >
         </div>
     {% endfor %}
 {% endblock content %}
