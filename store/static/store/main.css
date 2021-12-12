@@ -10,6 +10,10 @@ h1 {
     color: #ffffff;
 }
 
+h6 {
+    color: #e10074
+}
+
 img {
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -30,7 +34,7 @@ body {
 }
 
 a {
-    color: #fff
+    color: #e10074
 }
 
 .nav-link {

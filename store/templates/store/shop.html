@@ -1,12 +1,35 @@
 {% extends "store/base.html" %}
 {% block content %}
-    {% for product in Products %}
-        <div class="container">
-            <h1>Brand: {{ product.brand }}</h1>
-            <p>Colour {{ product.colour }} Size {{ product.size }}</p>
-            <p>Price {{ product.price }}</p>
-            {% load static %}
-            <img  src= "{{ MEDIA_URL }}{{ product.Picture.url }}"  alt="img" >
+    <div class="container d-flex justify-content-center mt-50 mb-50">
+        <div class="row">
+            {% for product in Products %}
+                <div class="col-md-4 mt-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <div><img  src= "{{ MEDIA_URL }}{{ product.Picture.url }}" class="card-img img-fluid" width="96" height="350" alt="img" ></div>
+                        </div>
+                        <div class="card-body bg-light text-center">
+                            <div class="mb-2">
+                                <h6 class="font-weight-semibold mb-2">
+                                    <a href="#" class="text-default text-dark mb-2" data-abc="true">{{ product.model }}</a>
+                                </h6>
+                                <a href="#" class="text-muted" data-abc="true">{{ product.brand }}</a>
+                            </div>
+                            <h3 class="mb-0 font-weight-semibold">${{ product.price }}</h3>
+                            <div> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> </div>
+                            <div class="text-muted mb-3">34 reviews</div> <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-cart-plus mr-2"></i>-</button>
+                            <input>
+                            <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-cart-plus mr-2"></i>+</button>
+                            <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-cart-plus mr-2"></i>Add to cart</button>
+                        </div>
+                    </div>
+                    <!--<h1>Brand: {{ product.brand }}</h1>
+                    <p>Colour {{ product.colour }} Size {{ product.size }}</p>
+                    <p>Price </p>
+                    {% load static %}
+                    <img  src= "{{ MEDIA_URL }}{{ product.Picture.url }}"  alt="img" -->
+                </div>
+            {% endfor %}
         </div>
-    {% endfor %}
+    </div>
 {% endblock content %}
